@@ -100,7 +100,9 @@ function Home() {
 
                     <div className="col-span-1 ml-2 text-center bg-gradient-to-br from-purple-300 via-pink-200 to-rose-100 rounded-4xl border-purple-600">
                         <div className="py-0.5 gap-2 flex justify-center items-center">
-                            <p className="font-bold text-gray-600">Réservations au cours de l'année</p>
+                            <p className="font-bold text-gray-600">
+                                Réservations au cours de l'année
+                            </p>
                             <input
                                 type="number"
                                 name=""
@@ -170,13 +172,13 @@ function Home() {
                                             </div>
                                         ))}
                                 </div>
-                                <div className="border-b-2 col-span-4" />
+                                <div className="border-b-2 border-white col-span-4" />
                             </div>
                         </div>
 
-                        <div className="row-span-1 flex flex-col justify-center mt-12 -mb-12">
+                        <div className="row-span-1 flex flex-col justify-center mt-12 -mb-12 text-white">
                             <div className="row-span-1 grid grid-cols-4">
-                                <p className="text-center font-bold text-gray-100 col-span-4 border-b-2 p-1">
+                                <p className="text-center font-bold text-gray-100 col-span-4 border-white border-b-2 p-1">
                                     Top 10 destinations
                                 </p>
                                 <div className="text-center font-semibold text-gray-100 bg-blue-400/10"></div>
@@ -204,21 +206,21 @@ function Home() {
                                         ))}
                                 </div>
                                 <div className="text-center"></div>
-                                <div className="border-b-2 col-span-4" />
+                                <div className="border-b-2 border-white col-span-4" />
                             </div>
                         </div>
                         <div className="row-span-1 flex flex-col justify-center mt-3">
-                            <div className="grid grid-cols-4 border-b-2 p-1">
-                                <p className="col-span-2 font-bold text-gray-100 text-center border-b-2 p-1">
+                            <div className="grid grid-cols-4 border-b-2 border-white p-1 text-white">
+                                <p className="col-span-2 font-bold text-gray-100 text-center border-b-2 border-white p-1">
                                     Top 3 hôtels
                                 </p>
-                                <p className="col-span-2 font-bold text-gray-100 text-center border-b-2 p-1">
+                                <p className="col-span-2 font-bold text-gray-100 text-center border-b-2 border-white p-1">
                                     Top 3 compagnies aériennes
                                 </p>
                                 <div className="text-center font-semibold text-gray-100 bg-blue-400/10">
                                     Hôtels
                                 </div>
-                                <div className="text-center font-semibold text-gray-100 bg-blue-400/10 border-r-2">
+                                <div className="text-center font-semibold text-gray-100 bg-blue-400/10 border-white border-r-2">
                                     Réservations
                                 </div>
                                 <div className="text-center font-semibold text-gray-100 bg-blue-400/10">
@@ -236,7 +238,7 @@ function Home() {
                                             </div>
                                         ))}
                                 </div>
-                                <div className="text-center border-r-2">
+                                <div className="text-center border-white border-r-2">
                                     {stats.topHotels &&
                                         stats.topHotels.map((top) => (
                                             <div
