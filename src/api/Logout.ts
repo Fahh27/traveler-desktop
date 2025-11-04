@@ -6,6 +6,7 @@ export default async function Logout(token: string | null, id_admin: number) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "69420",
             Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({ id_admin }),

@@ -10,6 +10,7 @@ export async function getBookings(token: string) {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "69420",
         },
     });
     const data = await response.json();
@@ -96,7 +97,7 @@ export async function getTopHotels(token: string) {
 }
 
 export async function getTopAirlines(token: string) {
-    const response = await fetch(url + "hotels/topAir", {
+    const response = await fetch(url + "airlines/topAir", {
         method: "GET",
         headers: {
             Authorization: `Bearer ${token}`,
