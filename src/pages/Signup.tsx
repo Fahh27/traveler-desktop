@@ -4,7 +4,7 @@ import Button from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { signup } from "../api/Auth";
-import { Lock, Mail, User } from "lucide-react";
+import { Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 
 function Signup() {
     const [admin, setAdmin] = useState({
@@ -25,6 +25,8 @@ function Signup() {
             console.log("Signup failed", err);
         }
     };
+
+    const [showPassword, setShowPassword] = useState(false);
 
     return (
         <div className="h-screen flex justify-center items-center bg-gradient-to-br from-blue-400 via-cyan-300 to-blue-200 py-12 px-4">
@@ -77,15 +79,26 @@ function Signup() {
                         <div className="col-span-1 text-semibold text-gray-700">
                             <Lock className="inline w-4 h-4 mr-1 mb-1"/>Mot de passe
                         </div>
+                        <div className="col-span-3 relative">
                         <input
-                            type="text"
+                            type={showPassword ? "text" : "password"}
                             placeholder="••••••••"
-                            className="col-span-3 border-2 p-3 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors pr-12"
+                            className="w-full border-2 p-3 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors pr-12"
                             value={admin.password}
-                            onChange={(e) =>
-                                setAdmin({ ...admin, password: e.target.value })
-                            }
+                            onChange={(e) => setAdmin({ ...admin, password: e.target.value })}
                         />
+                        <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                        >
+                            {showPassword ? (
+                                <EyeOff className="w-5 h-5"/>
+                            ) : (
+                                <Eye className="w-5 h-5"/>
+                            )}
+                        </button>
+                        </div>
                         <div className="col-span-1"></div>
                         <Button
                             className="mt-4 mb-2 gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl"
