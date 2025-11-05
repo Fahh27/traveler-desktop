@@ -3,7 +3,7 @@ import url from "./url";
 export async function login(admin: { email: string; password: string }) {
     const response = await fetch(url + "auth/login", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "69420", },
         body: JSON.stringify(admin),
     });
 

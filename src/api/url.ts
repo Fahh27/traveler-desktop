@@ -1,3 +1,3 @@
-const url = "http://localhost:3000/admin/";
+const url = "https://unfraternal-unrescuable-sienna.ngrok-free.dev/admin/";
 
 export default url;
