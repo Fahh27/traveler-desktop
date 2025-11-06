@@ -41,8 +41,8 @@ function Account({
         );
 
     return (
-        <div className="flex flex-col h-screen justify-center flex-1 pb-72 bg-gradient-to-br from-blue-400 via-cyan-300 to-blue-200">
-            <div className="grid grid-cols-3 bg-gradient-to-bl from-blue-50 via-cyan-200 to-blue-300 text-white text-shadow-lg shadow-lg ml-50 mr-50 pt-20 pb-30 py-12 rounded-b-4xl border-white border">
+        <div className="flex flex-col h-screen justify-center flex-1 pb-72 bg-gradient-to-br from-blue-300 via-cyan-200 to-blue-100">
+            <div className="grid grid-cols-3 bg-gradient-to-bl from-blue-50 via-cyan-300 to-blue-400 text-shadow-lg shadow-lg ml-50 mr-50 pt-20 pb-30 py-12 rounded-b-4xl border-white border">
                 <div className="flex justify-center items-center">
                     <div>
                         <div className="flex flex-row items-end">
@@ -54,7 +54,7 @@ function Account({
                     </div>
                 </div>
                 <div className="col-span-2 grid grid-rows-4 text-lg">
-                    <p className="grid grid-cols-7">
+                    <p className="grid grid-cols-7 text-white">
                         <span className="col-span-2 font-semibold">
                             Identifiant
                         </span>
@@ -63,19 +63,19 @@ function Account({
                         </span>
                     </p>
 
-                    <p className="grid grid-cols-7">
+                    <p className="grid grid-cols-7 text-white">
                         <span className="col-span-2 font-semibold">Nom</span>
                         <span className="col-span-5">{admin.admin.nom}</span>
                     </p>
 
-                    <p className="grid grid-cols-7">
+                    <p className="grid grid-cols-7 text-white">
                         <span className="col-span-2 font-semibold">
                             Prénoms
                         </span>
                         <span className="col-span-5">{admin.admin.prenom}</span>
                     </p>
 
-                    <p className="grid grid-cols-7">
+                    <p className="grid grid-cols-7 text-white">
                         <span className="col-span-2 font-semibold">E-mail</span>
                         <span className="col-span-5">{admin.admin.email}</span>
                     </p>
@@ -83,7 +83,7 @@ function Account({
             </div>
             <div className="w-full flex justify-center items-center mt-5">
                 <Button
-                    className="border-2 p-2 mt-5 hover:bg-gradient-to-br from-blue-100 via-cyan-100 to-blue-200 rounded-xl transition-colors duration-300 font-semibold text-white px-4 py-2"
+                    className="border-2 p-2 mt-5 bg-gradient-to-br from-blue-400 to-cyan-200 shadow-lg rounded-xl transition-colors duration-300 font-semibold border-white px-4 py-2"
                     onClick={async () => {
                         const status = await Logout(
                             token,
@@ -95,7 +95,10 @@ function Account({
                         }
                     }}
                 >
-                    <p>Se déconnecter<LogOut className="inline w-4 h-4 ml-1 mb-1"/></p>
+                    <p className="text-white hover:text-gray-100">
+                        Se déconnecter
+                        <LogOut className="inline w-4 h-4 ml-1 mb-1" />
+                    </p>
                 </Button>
             </div>
         </div>
